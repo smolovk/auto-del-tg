@@ -14,13 +14,13 @@ def get_text_messages(message):
     if message.text.startswith("/"):
         bot.delete_message(message.chat.id, message.message_id)
 
-    swbucks = message.text.startswith("$")
+    '''swbucks = message.text.startswith("$")
     
     while True:
         if (swbucks == False):
             bot.delete_message(message.chat.id, message.message_id)
             print(message.from_user.username)
-        time.sleep(300)
+        time.sleep(300)'''
 
 
 
