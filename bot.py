@@ -11,8 +11,10 @@ restrictedWords = ["test"]
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
 
-    if message.text.startswith("/"):
+    if (message.text.startswith("/") or message.text.startswith("!") or message.text.startswith(".")):
         bot.delete_message(message.chat.id, message.message_id)
+
+
 
     '''swbucks = message.text.startswith("$")
     
